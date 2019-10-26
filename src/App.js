@@ -6,7 +6,7 @@ import cards from "./cards.json";
 import "./App.css";
 
 class App extends Component {
-  // Setting this.state.cards to the cards json array
+  
   state = {
     cards,
     score: 0,
@@ -22,7 +22,7 @@ class App extends Component {
     this.state.cards.forEach(card => {
       card.count = 0;
     });
-    alert(`Game Over :( \nscore: ${this.state.score}`);
+    alert(`Na Na Naa.. Zohar say's You're DONE! its Game Over :( \nscore: ${this.state.score}`);
     this.setState({score: 0});
     return true;
   }
@@ -43,11 +43,11 @@ class App extends Component {
       }
     });
   }
-  // Map over this.state.cards and render a cardCard component for each card object
+  
   render() {
     return (
       <Wrapper>
-        <Header score={this.state.score} highscore={this.state.highscore}>Clicky Game</Header>
+        <Header score={this.state.score} highscore={this.state.highscore}>That MTB tho!</Header>
         {this.state.cards.map(card => (
           <Card
             clickCount={this.clickCount}
